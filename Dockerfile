@@ -10,7 +10,7 @@ RUN apk add tzdata && \
     apk del tzdata
 
 COPY groups.txt rulesets.txt /base/snippets/
-COPY pref.yml /base
+COPY pref.ini /base
 
 EXPOSE 25500
 

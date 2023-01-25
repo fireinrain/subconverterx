@@ -1,7 +1,7 @@
-FROM alpine:3.8
+FROM alpine:3.17.1
 MAINTAINER fireinrain
 
-ENV VERSION v0.6.4
+ENV VERSION v0.7.2
 
 WORKDIR /base
 RUN apk add wget tzdata && \

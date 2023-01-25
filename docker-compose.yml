@@ -1,0 +1,15 @@
+version: '3.7'
+services:
+  subconverter:
+    image: 'liuzy/subconverter'
+    container_name: subconverterx
+    ports:
+      - "25500:25500"
+    volumes:
+      # 自己下载pref.ini，添加节点，然后挂载到容器中
+      - ./pref.ini:/base/pref.ini
+    logging:
+      driver: json-file
+      options:
+        max-size: "1m"
+        max-file: "1"
